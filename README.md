@@ -91,6 +91,79 @@ php spark serve
 6. Open:
 http://localhost:8080
 
+---
+
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](Screenshots/dashboard.png)
+
+### POS System
+![POS](Screenshots/pos.png)
+
+### Reports
+![Reports](Screenshots/reports.png)
+
+### Inventory
+![Inventory](Screenshots/ingredients.png)
+![Stock](Screenshots/stock.png)
+
+### Menu
+![Categories](Screenshots/categories.png)
+![Items](Screenshots/items.png)
+
+### Users & Roles
+![Users](Screenshots/users.png)
+
+### Settings
+![Settings](Screenshots/settings.png)
+
+---
+
+## 🧠 System Workflow
+
+1. User selects items from POS
+2. Order is created
+3. Recipe is loaded
+4. Ingredients stock is deducted
+5. Stock movement is recorded
+6. Payment is processed
+7. Reports are updated
+
+---
+
+## ⚠️ Important Notes
+
+- `.env` file is not included for security reasons
+- Run `composer install` after cloning
+- Make sure database is imported before running
+
+---
+
+## 🚀 Future Improvements
+
+- JWT Authentication
+- React Frontend (SPA)
+- Real-time dashboard
+- Multi-branch system
+- Online ordering system
+
+---
+
+## 👩‍💻 Author
+
+**Fatema Yesmin**
+
+- GitHub: https://github.com/fatema-alt
+- Project: Kofi Co POS System
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
 
 
 
