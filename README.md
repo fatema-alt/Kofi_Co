@@ -1,69 +1,96 @@
-# CodeIgniter 4 Application Starter
+# ☕ Kofi Co - Restaurant POS & Inventory Management System
 
-## What is CodeIgniter?
+Kofi Co is a complete Restaurant Management System built with **CodeIgniter 4**.  
+It includes POS, inventory tracking, recipe-based stock deduction, and reporting features.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## 🚀 Features
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 🧾 POS System
+- Add to cart
+- Checkout & payment
+- Discount, tax & service charge support
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 📦 Inventory Management
+- Ingredient stock tracking
+- Low stock alerts
+- Stock movement history
 
-## Installation & updates
+### 🍽️ Recipe System
+- Menu item → ingredient mapping
+- Auto stock deduction on order
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### 📊 Reports & Analytics
+- Daily sales report
+- Category-wise sales
+- Top selling items
+- Payment summary (Chart.js ready)
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### 👥 User Roles
+- **Admin** → full access  
+- **Manager** → limited control  
+- **Cashier** → POS + orders  
 
-## Setup
+### ⚙️ Settings
+- Tax & service charge config
+- Currency setup
+- Logo upload
+- Receipt footer
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+---
 
-## Important Change with index.php
+## 🛠️ Tech Stack
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- **Backend:** CodeIgniter 4 (PHP)
+- **Frontend:** HTML, CSS, JavaScript
+- **Database:** MySQL
+- **Charts:** Chart.js
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+---
 
-**Please** read the user guide for a better explanation of how CI4 works!
 
-## Repository Management
+## 📂 Project Structure
+Kofi_Co/
+├── app/
+├── public/
+├── database/
+│ └── kofi_co.sql
+├── tests/
+├── .gitignore
+├── composer.json
+├── spark
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+---
 
-## Server Requirements
+## ⚙️ Installation
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+### 1. Clone the repository
+```bash
+git clone https://github.com/fatema-alt/kofi-co.git
+cd kofi-co
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+2. Install dependencies
+composer install
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+3. Setup environment
+Copy .env.example → .env
+Configure database:
+database.default.hostname = localhost
+database.default.database = kofi_co
+database.default.username = root
+database.default.password =
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+4. Import database
+Import database/kofi_co.sql using phpMyAdmin
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+5. Run the project
+php spark serve
+
+6. Open:
+http://localhost:8080
+
+
+
+
